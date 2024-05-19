@@ -14,7 +14,10 @@ namespace mt
 		}
 		void SpecialAbility(float x, float y, std::vector<Enemies*>& m_enemiesObjects,
 			bool& flag_meteorit_visible, sf::Clock& clock_meteorit, Enemies*& obj) override{
-					
+			obj = m_enemiesObjects[1];
+			m_enemiesObjects.erase(m_enemiesObjects.begin() + 1);
+			clock_meteorit.restart();
+			flag_meteorit_visible = false;
 		}
 	};
 }
