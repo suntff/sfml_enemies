@@ -1,12 +1,11 @@
 ﻿#include <SFML/Graphics.hpp>
-#include <Circle.hpp>
 #include <Game.hpp>
 
 int main()
 {
-    mt::Game game(1920, 1080, "Game");
+    msp::Game game("SFML_enemies");
 
-    if (!game.Setup(1))
+    if (!game.Setup())
         return -1;
 
     game.LifeCycle();
