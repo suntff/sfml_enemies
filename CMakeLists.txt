@@ -17,7 +17,8 @@ include_directories("ext/SFML/include/")	# добавляем директори
 include_directories("inc/")
 link_directories("ext/SFML/lib/")	
 
-add_executable("${PROJECT_NAME}" main.cpp inc/game.hpp inc/ship.hpp inc/bullet.hpp inc/circle.hpp inc/Destroyer.hpp inc/UFO.hpp inc/SpaceObject.hpp inc/Enemies.hpp inc/Komet.hpp inc/Meteorit.hpp)
+add_executable("${PROJECT_NAME}" main.cpp inc/game.hpp inc/ship.hpp inc/bullet.hpp inc/Enemies.hpp inc/Enemy1.hpp  inc/Enemy2.hpp inc/Enemy3.hpp inc/asteroid.hpp inc/menu.hpp
+src/game.cpp src/ship.cpp src/bullet.cpp src/Enemies.cpp src/Enemy1.cpp  src/Enemy2.cpp src/Enemy3.cpp src/asteroid.cpp src/menu.cpp)
 											
 target_link_libraries("${PROJECT_NAME}" 
 						  sfml-graphics-s-d
